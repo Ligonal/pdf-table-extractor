@@ -1,0 +1,144 @@
+{
+  "PDF1": {
+    "validate_entire_document": true,
+    "zone_validation": {
+      "x1": 600,
+      "y1": 10,
+      "x2": 680,
+      "y2": 20,
+      "validation_words": [
+        "UTC"
+      ]
+    },
+    "multi_page_table": false,
+    "general_regex": {
+      "Title": "(?<=TITLE: )(\\w+| {1}|-)+",
+      "Pages": "(?<=PAGE: )(\\w+| {1}|-)+",
+      "Chg Auth": "(?<=CHG AUTH: )(\\w+| {1}|-)+"
+    },
+    "specific_fields": {
+      "Total Items": {
+        "look_up_word": "Total Items",
+        "location": "right",
+        "find_regex_word": ".*"
+      },
+      "Freights": {
+        "look_up_word": "Freights",
+        "location": "right",
+        "find_regex_word": ".*"
+      },
+      "Priority Surcharges": {
+        "look_up_word": "Priority Surcharges / Additional Handling Fees",
+        "location": "right",
+        "find_regex_word": ".*"
+      },
+      "Total Payable": {
+        "look_up_word": "Total Payable",
+        "location": "right",
+        "find_regex_word": ".*"
+      },
+      "HTS": {
+        "look_up_word": "HTS:",
+        "location": "right",
+        "find_regex_word": ".*"
+      },
+      "Export Control": {
+        "look_up_word": "Export Control #:",
+        "location": "right",
+        "find_regex_word": ".*"
+      },
+      "CPN": {
+        "look_up_word": "Customer Part Number:",
+        "location": "right",
+        "find_regex_word": ".*"
+      }
+    },
+    "tables": {
+      "table1":{
+        "name": "ORDER CONFIRMATION",
+        "complete_titles": true,
+        "default_title_configuration": {
+          "column_number": "undefined",
+          "left_offset": "center",
+          "left_offset_value": 5,
+          "right_offset": "center",
+          "right_offset_value": 5,
+          "exclude_regex": "N/A",
+          "max_space_distance": 5
+        },
+        "titles": {
+          "Item": {
+            "column_number": "1",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Description": {
+            "column_number": "2",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Part Number": {
+            "column_number": "3",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Quantity": {
+            "column_number": "4",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Unit Price": {
+            "column_number": "5",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "UOM": {
+            "column_number": "6",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Extended Price Expected Ship Date": {
+            "column_number": "7",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          }
+        },
+        "row_definition_column": {
+          "column_pivot": "ITEM",
+          "column_index": 0,
+          "column_align": "top",
+          "row_top_offset_value": 5,
+          "row_bot_offset_value": 5,
+          "exclude_regex": "N/A"
+        },
+        "footer_delimiter": "PAGE OF",
+        "continue_delimiter": "N/A",
+        "bottom_delimiter": "Export control",
+        "header_delimiter": "Item"
+      },
+      "table2":{},
+      "table3":{}
+    }
+  }
+}

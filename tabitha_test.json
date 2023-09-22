@@ -1,0 +1,628 @@
+{
+  "PDF1": {
+    "validate_entire_document": true,
+    "zone_validation": {
+      "x1": 600,
+      "y1": 10,
+      "x2": 680,
+      "y2": 20,
+      "validation_words": [
+        "UTC"
+      ]
+    },
+    "multi_page_table": false,
+    "general_regex": {
+      "Title": "(?<=TITLE: )(\\w+| {1}|-)+",
+      "Pages": "(?<=PAGE: )(\\w+| {1}|-)+",
+      "Chg Auth": "(?<=CHG AUTH: )(\\w+| {1}|-)+"
+    },
+    "specific_fields": {
+      "Program": {
+        "look_up_word": "PROGRAM:",
+        "location": "right",
+        "find_regex_word": ".*"
+      },
+      "PL": {
+        "look_up_word": "PL:",
+        "location": "right",
+        "find_regex_word": ".*"
+      },
+      "Rev": {
+        "look_up_word": "REV:",
+        "location": "right",
+        "find_regex_word": ".*"
+      },
+      "Subtype": {
+        "look_up_word": "SUBTYPE:",
+        "location": "right",
+        "find_regex_word": ".*"
+      },
+      "CN": {
+        "look_up_word": "CN:",
+        "location": "right",
+        "find_regex_word": ".*"
+      },
+      "Status": {
+        "look_up_word": "STATUS:",
+        "location": "right",
+        "find_regex_word": ".*"
+      },
+      "Rel Date": {
+        "look_up_word": "REL DATE:",
+        "location": "right",
+        "find_regex_word": ".*"
+      },
+      "Title": {
+        "look_up_word": "TITLE:",
+        "location": "right",
+        "find_regex_word": ".*"
+      }
+    },
+    "tables": {
+      "APPLICATION LIST":{
+        "name": "Application List",
+        "complete_titles": true,
+        "default_title_configuration": {
+          "column_number": "undefined",
+          "left_offset": "center",
+          "left_offset_value": 5,
+          "right_offset": "center",
+          "right_offset_value": 5,
+          "exclude_regex": "N/A",
+          "max_space_distance": 5
+        },
+        "titles": {
+          "DASH": {
+            "column_number": "0",
+            "left_offset": "left",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "QTY": {
+            "column_number": "1",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "NEXT ASSEMBLY": {
+            "column_number": "2",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "CONFIG ITEM": {
+            "column_number": "3",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "USAGE": {
+            "column_number": "4",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "FROM": {
+            "column_number": "5",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "THRU": {
+            "column_number": "6",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          }
+        },
+        "row_definition_column": {
+          "column_pivot": "NEXT ASSEMBLY",
+          "column_index": 2,
+          "column_align": "top",
+          "row_top_offset_value": 5,
+          "row_bot_offset_value": 5
+        },
+        "footer_delimiter": "AS OF",
+        "continue_delimiter": "N/A",
+        "bottom_delimiter": "PARTS LIST",
+        "header_delimiter": "APPLICATION LIST"
+      },
+      "PARTS LIST":{
+        "name": "Parts List",
+        "complete_titles": true,
+        "default_title_configuration": {
+          "column_number": "undefined",
+          "left_offset": "center",
+          "left_offset_value": 5,
+          "right_offset": "center",
+          "right_offset_value": 5,
+          "exclude_regex": "N/A",
+          "max_space_distance": 5
+        },
+        "titles": {
+          "DASH": {
+            "column_number": "0",
+            "left_offset": "left",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "NOMENCLATURE": {
+            "column_number": "1",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "TYPE": {
+            "column_number": "2",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "PROCESS": {
+            "column_number": "3",
+            "left_offset": "right",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "FINISH": {
+            "column_number": "4",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "CRITICALITIES": {
+            "column_number": "5",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "NOTES": {
+            "column_number": "6",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "ZONES": {
+            "column_number": "7",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "FIND": {
+            "column_number": "8",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "LR": {
+            "column_number": "9",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          }
+        },
+        "row_definition_column": {
+          "column_pivot": "NOMENCLATURE",
+          "column_index": 1,
+          "column_align": "top",
+          "row_top_offset_value": 5,
+          "row_bot_offset_value": 5
+        },
+        "footer_delimiter": "AS OF",
+        "continue_delimiter": "N/A",
+        "bottom_delimiter": "MAKE FROM",
+        "header_delimiter": "PARTS LIST"
+      },
+      "MAKE FROM":{
+        "name": "Make from",
+        "complete_titles": true,
+        "default_title_configuration": {
+          "column_number": "undefined",
+          "left_offset": "center",
+          "left_offset_value": 5,
+          "right_offset": "center",
+          "right_offset_value": 5,
+          "exclude_regex": "N/A",
+          "max_space_distance": 5
+        },
+        "titles": {
+          "DASH": {
+            "column_number": "0",
+            "left_offset": "left",
+            "left_offset_value": 5,
+            "right_offset": "left",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "MATERIAL / PART NUMBER": {
+            "column_number": "1",
+            "left_offset": "left",
+            "left_offset_value": 5,
+            "right_offset": "left",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "TYPE / NOMENCLATURE": {
+            "column_number": "2",
+            "left_offset": "left",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "SPECIFICATION": {
+            "column_number": "3",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "THKNS/DIA/HGT": {
+            "column_number": "4",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "WIDTH": {
+            "column_number": "5",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "LENGTH": {
+            "column_number": "6",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "WALL THKNS": {
+            "column_number": "7",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "UOM": {
+            "column_number": "8",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "LR": {
+            "column_number": "9",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          }
+        },
+        "row_definition_column": {
+          "column_pivot": "MATERIAL / PART NUMBER",
+          "column_index": 1,
+          "column_align": "top",
+          "row_top_offset_value": 5,
+          "row_bot_offset_value": 5
+        },
+        "footer_delimiter": "AS OF",
+        "continue_delimiter": "N/A",
+        "bottom_delimiter": "ASSEMBLY STRUCTURE",
+        "header_delimiter": "MAKE FROM"
+      },
+      "ASSEMBLY STRUCTURE":{
+        "name": "Assembly Structure",
+        "complete_titles": false,
+        "default_title_configuration": {
+          "column_number": "undefined",
+          "left_offset": "center",
+          "left_offset_value": 5,
+          "right_offset": "center",
+          "right_offset_value": 5,
+          "exclude_regex": "N/A",
+          "max_space_distance": 2.5
+        },
+        "titles": {
+          "UOM": {
+            "column_number": "4",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "PART NUMBER": {
+            "column_number": "5",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "NOMENCLATURE": {
+            "column_number": "6",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "CAGE": {
+            "column_number": "7",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "C": {
+            "column_number": "8",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "S": {
+            "column_number": "9",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "NOTES": {
+            "column_number": "10",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "PROCESS": {
+            "column_number": "11",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "ZONES": {
+            "column_number": "12",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "FIND": {
+            "column_number": "13",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "LR": {
+            "column_number": "14",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          }
+        },
+        "row_definition_column": {
+          "column_pivot": "PART NUMBER",
+          "column_index": 5,
+          "column_align": "top",
+          "row_top_offset_value": 5,
+          "row_bot_offset_value": 5
+        },
+        "footer_delimiter": "AS OF",
+        "continue_delimiter": "N/A",
+        "bottom_delimiter": "LIMITED EFFECTIVITY",
+        "header_delimiter": "ASSEMBLY STRUCTURE"
+      },
+      "LIMITED EFFECTIVITY":{
+        "name": "Limited Effectivity",
+        "complete_titles": true,
+        "default_title_configuration": {
+          "column_number": "undefined",
+          "left_offset": "center",
+          "left_offset_value": 5,
+          "right_offset": "center",
+          "right_offset_value": 5,
+          "exclude_regex": "N/A",
+          "max_space_distance": 5
+        },
+        "titles": {
+          "PART NUMBER": {
+            "column_number": "0",
+            "left_offset": "left",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "CAGE": {
+            "column_number": "1",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "QTY": {
+            "column_number": "2",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "ASSY": {
+            "column_number": "3",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "CONFIG ITEM": {
+            "column_number": "4",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "USAGE": {
+            "column_number": "5",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "FROM": {
+            "column_number": "6",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "THRU": {
+            "column_number": "7",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "LR": {
+            "column_number": "8",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          }
+        },
+        "row_definition_column": {
+          "column_pivot": "PART NUMBER",
+          "column_index": 0,
+          "column_align": "top",
+          "row_top_offset_value": 5,
+          "row_bot_offset_value": 5
+        },
+        "footer_delimiter": "AS OF",
+        "continue_delimiter": "N/A",
+        "bottom_delimiter": "NOTES: UNLESS OTHERWISE SPECIFIED",
+        "header_delimiter": "LIMITED EFFECTIVITY"
+      },
+      "Notes": {
+        "name": "Notes",
+        "complete_titles": true,
+        "default_title_configuration": {
+          "column_number": "undefined",
+          "left_offset": "center",
+          "left_offset_value": 5,
+          "right_offset": "center",
+          "right_offset_value": 5,
+          "exclude_regex": "N/A",
+          "max_space_distance": 5
+        },
+        "titles": {
+          "NOTE": {
+            "column_number": "0",
+            "left_offset": "left",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "FLG": {
+            "column_number": "1",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "left",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "NOTE TEXT": {
+            "column_number": "2",
+            "left_offset": "left",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "LR": {
+            "column_number": "3",
+            "left_offset": "right",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          }
+        },
+        "row_definition_column": {
+          "column_pivot": "NOTE",
+          "column_index": 0,
+          "column_align": "top",
+          "row_top_offset_value": 5,
+          "row_bot_offset_value": 5
+        },
+        "footer_delimiter": "AS OF",
+        "continue_delimiter": "N/A",
+        "bottom_delimiter": "PROCESS / FINISH CODES",
+        "header_delimiter": "NOTES:"
+      }
+    }
+  }
+}

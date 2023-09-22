@@ -1,0 +1,655 @@
+{
+  "PDF1": {
+    "validate_entire_document": true,
+    "zone_validation": {
+      "x1": 600,
+      "y1": 10,
+      "x2": 680,
+      "y2": 20,
+      "validation_words": [
+        "UTC"
+      ]
+    },
+    "multi_page_table": false,
+    "general_regex": {
+      "Print Date": "(?<=PRINT DATE - )(\\w+| {1}|-)+",
+      "Security Code": "(?<=SECURITY CODE: )(\\w+| {1}|-)+"
+    },
+    "specific_fields": {
+      "Harness": {
+        "look_up_word": "Harness",
+        "location": "down",
+        "find_regex_word": ".*"
+      },
+      "Manufacturing Record": {
+        "look_up_word": "Manufacturing Record",
+        "location": "down",
+        "find_regex_word": ".*"
+      },
+      "Rev": {
+        "look_up_word": "Rev",
+        "location": "down",
+        "find_regex_word": ".*"
+      },
+      "W Num": {
+        "look_up_word": "W Num",
+        "location": "down",
+        "find_regex_word": ".*"
+      }
+    },
+    "tables": {
+      "Manufacturing Record":{
+        "name": "Manufacturing Record",
+        "complete_titles": true,
+        "default_title_configuration": {
+          "column_number": "undefined",
+          "left_offset": "center",
+          "left_offset_value": 5,
+          "right_offset": "center",
+          "right_offset_value": 5,
+          "exclude_regex": "N/A",
+          "max_space_distance": 5
+        },
+        "titles": {
+          "Harness": {
+            "column_number": "0",
+            "left_offset": "left",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "W Num": {
+            "column_number": "1",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Section": {
+            "column_number": "2",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Qty": {
+            "column_number": "3",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "TEMP FAHR": {
+            "column_number": "4",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "SkyDrol": {
+            "column_number": "5",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Mach Ovbd": {
+            "column_number": "6",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          }
+        },
+        "row_definition_column": {
+          "column_pivot": "Harness",
+          "column_index": 0,
+          "column_align": "top",
+          "row_top_offset_value": 5,
+          "row_bot_offset_value": 5
+        },
+        "footer_delimiter": "Manufacturing Record",
+        "continue_delimiter": "THE BOEING COMPANY",
+        "bottom_delimiter": "Title",
+        "header_delimiter": "Shop Aid"
+      },
+      "Parts List":{
+        "name": "Parts List",
+        "complete_titles": true,
+        "default_title_configuration": {
+          "column_number": "undefined",
+          "left_offset": "center",
+          "left_offset_value": 5,
+          "right_offset": "center",
+          "right_offset_value": 5,
+          "exclude_regex": "N/A",
+          "max_space_distance": 5
+        },
+        "titles": {
+          "Part Number": {
+            "column_number": "0",
+            "left_offset": "left",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Description": {
+            "column_number": "1",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Qty": {
+            "column_number": "2",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Len FT-IN": {
+            "column_number": "3",
+            "left_offset": "right",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "ISSUE MATL FR TO Code": {
+            "column_number": "4",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Vendor Code": {
+            "column_number": "5",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Proc Status": {
+            "column_number": "6",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Equip ID": {
+            "column_number": "7",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Notes": {
+            "column_number": "8",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          }
+        },
+        "row_definition_column": {
+          "column_pivot": "Part Number",
+          "column_index": 0,
+          "column_align": "top",
+          "row_top_offset_value": 5,
+          "row_bot_offset_value": 5
+        },
+        "footer_delimiter": "Parts List",
+        "continue_delimiter": "N/A",
+        "bottom_delimiter": "(Section end)",
+        "header_delimiter": "Shop Aid"
+      },
+      "Wire Prep Order":{
+        "name": "Wire Prep Order",
+        "complete_titles": true,
+        "default_title_configuration": {
+          "column_number": "undefined",
+          "left_offset": "center",
+          "left_offset_value": 5,
+          "right_offset": "center",
+          "right_offset_value": 5,
+          "exclude_regex": "N/A",
+          "max_space_distance": 5
+        },
+        "titles": {
+          "Sub Assem": {
+            "column_number": "0",
+            "left_offset": "left",
+            "left_offset_value": 5,
+            "right_offset": "left",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Wire Id": {
+            "column_number": "1",
+            "left_offset": "left",
+            "left_offset_value": 5,
+            "right_offset": "left",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Col": {
+            "column_number": "2",
+            "left_offset": "left",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Fam": {
+            "column_number": "3",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Wire Code": {
+            "column_number": "4",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Cut Len FT-IN": {
+            "column_number": "5",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Wire Type": {
+            "column_number": "6",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Matl": {
+            "column_number": "7",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          }
+        },
+        "row_definition_column": {
+          "column_pivot": "MATERIAL / PART NUMBER",
+          "column_index": 1,
+          "column_align": "top",
+          "row_top_offset_value": 5,
+          "row_bot_offset_value": 5
+        },
+        "footer_delimiter": "Wire Prep Order",
+        "continue_delimiter": "N/A",
+        "bottom_delimiter": "(Section end)",
+        "header_delimiter": "Shop Aid"
+      },
+      "Wire Hook Up":{
+        "name": "Wire Hook Up",
+        "complete_titles": true,
+        "default_title_configuration": {
+          "column_number": "undefined",
+          "left_offset": "center",
+          "left_offset_value": 5,
+          "right_offset": "center",
+          "right_offset_value": 5,
+          "exclude_regex": "N/A",
+          "max_space_distance": 2.5
+        },
+        "titles": {
+          "Refdes": {
+            "column_number": "4",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Pin": {
+            "column_number": "5",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "L": {
+            "column_number": "6",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "SP": {
+            "column_number": "7",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Notes": {
+            "column_number": "8",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Wire Id": {
+            "column_number": "9",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Col": {
+            "column_number": "10",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Rbn": {
+            "column_number": "11",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Matl": {
+            "column_number": "12",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Wir Cod": {
+            "column_number": "13",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Fam": {
+            "column_number": "14",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Sub Assy": {
+            "column_number": "14",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Cut Len FT-IN": {
+            "column_number": "14",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Refdes": {
+            "column_number": "14",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Pin": {
+            "column_number": "14",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Fam": {
+            "column_number": "14",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Fam": {
+            "column_number": "14",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Fam": {
+            "column_number": "14",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Fam": {
+            "column_number": "14",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Fam": {
+            "column_number": "14",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          }
+        },
+        "row_definition_column": {
+          "column_pivot": "PART NUMBER",
+          "column_index": 5,
+          "column_align": "top",
+          "row_top_offset_value": 5,
+          "row_bot_offset_value": 5
+        },
+        "footer_delimiter": "AS OF",
+        "continue_delimiter": "N/A",
+        "bottom_delimiter": "LIMITED EFFECTIVITY",
+        "header_delimiter": "ASSEMBLY STRUCTURE"
+      },
+      "LIMITED EFFECTIVITY":{
+        "name": "Limited Effectivity",
+        "complete_titles": true,
+        "default_title_configuration": {
+          "column_number": "undefined",
+          "left_offset": "center",
+          "left_offset_value": 5,
+          "right_offset": "center",
+          "right_offset_value": 5,
+          "exclude_regex": "N/A",
+          "max_space_distance": 5
+        },
+        "titles": {
+          "PART NUMBER": {
+            "column_number": "0",
+            "left_offset": "left",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "CAGE": {
+            "column_number": "1",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "QTY": {
+            "column_number": "2",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "ASSY": {
+            "column_number": "3",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "CONFIG ITEM": {
+            "column_number": "4",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "USAGE": {
+            "column_number": "5",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "FROM": {
+            "column_number": "6",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "THRU": {
+            "column_number": "7",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "LR": {
+            "column_number": "8",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          }
+        },
+        "row_definition_column": {
+          "column_pivot": "PART NUMBER",
+          "column_index": 0,
+          "column_align": "top",
+          "row_top_offset_value": 5,
+          "row_bot_offset_value": 5
+        },
+        "footer_delimiter": "AS OF",
+        "continue_delimiter": "N/A",
+        "bottom_delimiter": "NOTES: UNLESS OTHERWISE SPECIFIED",
+        "header_delimiter": "LIMITED EFFECTIVITY"
+      },
+      "Notes": {
+        "name": "Notes",
+        "complete_titles": true,
+        "default_title_configuration": {
+          "column_number": "undefined",
+          "left_offset": "center",
+          "left_offset_value": 5,
+          "right_offset": "center",
+          "right_offset_value": 5,
+          "exclude_regex": "N/A",
+          "max_space_distance": 5
+        },
+        "titles": {
+          "NOTE": {
+            "column_number": "0",
+            "left_offset": "left",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "FLG": {
+            "column_number": "1",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "left",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "NOTE TEXT": {
+            "column_number": "2",
+            "left_offset": "left",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "LR": {
+            "column_number": "3",
+            "left_offset": "right",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          }
+        },
+        "row_definition_column": {
+          "column_pivot": "NOTE",
+          "column_index": 0,
+          "column_align": "top",
+          "row_top_offset_value": 5,
+          "row_bot_offset_value": 5
+        },
+        "footer_delimiter": "AS OF",
+        "continue_delimiter": "N/A",
+        "bottom_delimiter": "PROCESS / FINISH CODES",
+        "header_delimiter": "NOTES:"
+      }
+    }
+  }
+}

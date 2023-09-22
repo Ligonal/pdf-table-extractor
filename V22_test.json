@@ -1,0 +1,171 @@
+{
+  "PDF1": {
+    "validate_entire_document": true,
+    "zone_validation": {
+      "x1": 600,
+      "y1": 10,
+      "x2": 680,
+      "y2": 20,
+      "validation_words": [
+        "UTC"
+      ]
+    },
+    "multi_page_table": false,
+    "general_regex": {
+      "Title": "(?<=TITLE: )(\\w+| {1}|-)+",
+      "Pages": "(?<=PAGE: )(\\w+| {1}|-)+",
+      "Chg Auth": "(?<=CHG AUTH: )(\\w+| {1}|-)+"
+    },
+    "specific_fields": {
+      "Harness": {
+        "look_up_word": "Harness",
+        "location": "down",
+        "find_regex_word": ".*"
+      },
+      "Rev": {
+        "look_up_word": "Rev",
+        "location": "down",
+        "find_regex_word": ".*"
+      },
+      "W Num": {
+        "look_up_word": "W Num",
+        "location": "down",
+        "find_regex_word": ".*"
+      }
+    },
+    "tables": {
+      "table1":{
+        "name": "Engineering Sheets",
+        "complete_titles": true,
+        "default_title_configuration": {
+          "column_number": "undefined",
+          "left_offset": "center",
+          "left_offset_value": 5,
+          "right_offset": "center",
+          "right_offset_value": 5,
+          "exclude_regex": "N/A",
+          "max_space_distance": 5
+        },
+        "titles": {
+          "Rev": {
+            "column_number": "0",
+            "left_offset": "right",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Group Code": {
+            "column_number": "1",
+            "left_offset": "right",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Equip ID": {
+            "column_number": "2",
+            "left_offset": "right",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Issue": {
+            "column_number": "3",
+            "left_offset": "right",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "QTY": {
+            "column_number": "4",
+            "left_offset": "right",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Len Inches": {
+            "column_number": "5",
+            "left_offset": "right",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Note Codes": {
+            "column_number": "6",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Diag": {
+            "column_number": "7",
+            "left_offset": "right",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Vendor": {
+            "column_number": "8",
+            "left_offset": "right",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Matl Code": {
+            "column_number": "9",
+            "left_offset": "right",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "C D": {
+            "column_number": "10",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Desc/Part No": {
+            "column_number": "11",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "MateWith/OfEquip": {
+            "column_number": "12",
+            "left_offset": "right",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          }
+        },
+        "row_definition_column": {
+          "column_pivot": "Rev",
+          "column_index": 0,
+          "column_align": "top",
+          "row_top_offset_value": 5,
+          "row_bot_offset_value": 5
+        },
+        "footer_delimiter": "Equipment Record",
+        "continue_delimiter": "N/A",
+        "bottom_delimiter": "(Section end)",
+        "header_delimiter": "Engineering Sheets"
+      },
+      "table2":{},
+      "table3":{}
+    }
+  }
+}

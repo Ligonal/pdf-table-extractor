@@ -1,0 +1,134 @@
+{
+  "EZAir PDF": {
+    "validate_entire_document": true,
+    "zone_validation": {
+      "x1": 600,
+      "y1": 10,
+      "x2": 680,
+      "y2": 20,
+      "validation_words": [
+        "UTC"
+      ]
+    },
+    "multi_page_table": false,
+    "general_regex": {
+      "Bill To": "(?<=BILL TO: )(\\w+| {1}|-)+",
+      "Buyer": "(?<=BUYER: )(\\w+| {1}|-)+",
+      "Phone": "(?<=Phone: )(\\w+| {1}|-)+"
+    },
+    "specific_fields": {
+      "PO": {
+        "look_up_word": "P.O. #",
+        "location": "down",
+        "find_regex_word": ".*"
+      },
+      "Vendor No.": {
+        "look_up_word": "VENDOR NO.",
+        "location": "down",
+        "find_regex_word": ".*"
+      },
+      "Order Date": {
+        "look_up_word": "ORDER DATE",
+        "location": "down",
+        "find_regex_word": ".*"
+      }
+    },
+    "tables": {
+      "EZAir PO":{
+        "name": "Purchase Order",
+        "complete_titles": true,
+        "default_title_configuration": {
+          "name": "Default",
+          "column_number": "undefined",
+          "left_offset": "center",
+          "left_offset_value": 5,
+          "right_offset": "center",
+          "right_offset_value": 5,
+          "exclude_regex": "N/A",
+          "max_space_distance": 5
+        },
+        "titles": {
+          "Title 0": {
+            "name": "QUANTITY",
+            "column_number": "0",
+            "left_offset": "right",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Title 1": {
+            "name": "ON DOCK DATE",
+            "column_number": "1",
+            "left_offset": "right",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Title 2": {
+            "name": "LINE",
+            "column_number": "2",
+            "left_offset": "right",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Title 3": {
+            "name": "STOCK NO. DESCRIPTION",
+            "column_number": "3",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "right",
+            "right_offset_value": 5,
+            "exclude_regex": [
+              "\\d*,\\d*",
+              "QA Clauses"]
+          },
+          "Title 4": {
+            "name": "U/M",
+            "column_number": "4",
+            "left_offset": "right",
+            "left_offset_value": 5,
+            "right_offset": "left",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Title 5": {
+            "name": "PRICE",
+            "column_number": "5",
+            "left_offset": "left",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          },
+          "Title 6": {
+            "name": "AMOUNT",
+            "column_number": "6",
+            "left_offset": "center",
+            "left_offset_value": 5,
+            "right_offset": "center",
+            "right_offset_value": 5,
+            "exclude_regex": "N/A"
+          }
+        },
+        "row_definition_column": {
+          "column_pivot": "LINE",
+          "column_index": 2,
+          "column_align": "top",
+          "row_top_offset_value": 5,
+          "row_bot_offset_value": 5,
+          "exclude_regex": "N/A"
+        },
+        "footer_delimiter": "Control of Non-Conforming Product.",
+        "continue_delimiter": "CONTINUED ON PAGE:",
+        "bottom_delimiter": "SALES TAX",
+        "header_delimiter": "QUANTITY"
+      },
+      "table2":{},
+      "table3":{}
+    }
+  }
+}
